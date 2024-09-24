@@ -7,6 +7,9 @@ import Eventhandle from "./components/Eventhandle";
 import Greeting from "./components/Greeting";
 import Userprofile from "./components/Userprofile";
 import Hook from "./components/Hook";
+import TableComponent from "./components/TableComponent";
+import DataFetching from "./components/DataFetching";
+import Axioscall from "./components/Axioscall";
 
 function App() {
 
@@ -24,13 +27,31 @@ function App() {
     email: 'john.doe@example.com',
   };
 
+  // -----------------------------------------------------------------------------------
+  const columnKeys = ['name', 'age', 'occupation'];
+  const columns = ['Name', 'Age', 'Occupation'];
+ 
+  const data = [
+    { name: 'Alice', age: 25, occupation: 'Engineer' },
+    { name: 'Bob', age: 30, occupation: 'Designer' },
+    { name: 'Charlie', age: 35, occupation: 'Teacher' },
+  ];
+
+  const tableAttributes = {
+    border: '1',
+    cellPadding: '10',
+    cellSpacing: '0',
+  };
+
   return (
 
 
     <div>
-      {/* <Example />
+      {/* <Example /> */}
 
-      <Eventhandle /> */}
+      {/* <Eventhandle /> */}
+      {/* <DataFetching/> */}
+      <Axioscall/>
 
       {/* <div>
         <Greeting name="Alice" />
@@ -40,7 +61,14 @@ function App() {
 
       {/* <Userprofile user={userInfo} /> */}
 
-<Hook/>
+      {/* <Hook/> */}
+
+      {/* <TableComponent
+        columns={columns} 
+        columnKeys={columnKeys}  
+        data={data}  
+    
+      /> */}
 
     </div>
 
