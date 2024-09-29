@@ -10,9 +10,15 @@ import Hook from "./components/Hook";
 import TableComponent from "./components/TableComponent";
 import DataFetching from "./components/DataFetching";
 import Axioscall from "./components/Axioscall";
+import MaterialComponent from "./views/MaterialComponent";
+import GridComponent from "./views/GridComponent";
+import ResponsiveGrid from "./views/ResponsiveGrid";
+import NestedGrid from "./views/NestedGrid";
+import CustomerComponent from "./components/CustomerComponent ";
+
+
 
 function App() {
-
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   // Function to handle login/logout
@@ -20,44 +26,40 @@ function App() {
   //   setIsLoggedIn(!isLoggedIn);
   // };
 
-
   const userInfo = {
-    name: 'John Doe',
+    name: "John Doe",
     age: 28,
-    email: 'john.doe@example.com',
+    email: "john.doe@example.com",
   };
 
   // -----------------------------------------------------------------------------------
-  const columnKeys = ['name', 'age', 'occupation'];
-  const columns = ['Name', 'Age', 'Occupation'];
- 
+  const columnKeys = ["name", "age", "occupation"];
+  const columns = ["Name", "Age", "Occupation"];
+
   const data = [
-    { name: 'Alice', age: 25, occupation: 'Engineer' },
-    { name: 'Bob', age: 30, occupation: 'Designer' },
-    { name: 'Charlie', age: 35, occupation: 'Teacher' },
+    { name: "Alice", age: 25, occupation: "Engineer" },
+    { name: "Bob", age: 30, occupation: "Designer" },
+    { name: "Charlie", age: 35, occupation: "Teacher" },
   ];
 
   const tableAttributes = {
-    border: '1',
-    cellPadding: '10',
-    cellSpacing: '0',
+    border: "1",
+    cellPadding: "10",
+    cellSpacing: "0",
   };
 
   return (
-
-
     <div>
       {/* <Example /> */}
 
       {/* <Eventhandle /> */}
       {/* <DataFetching/> */}
-      <Axioscall/>
+      {/* <Axioscall/> */}
 
       {/* <div>
         <Greeting name="Alice" />
         <Greeting name="Bob" />
       </div> */}
-
 
       {/* <Userprofile user={userInfo} /> */}
 
@@ -70,9 +72,12 @@ function App() {
     
       /> */}
 
+      {/* <MaterialComponent /> */}
+      {/* <GridComponent/> */}
+      {/* <ResponsiveGrid/> */}
+        {/* <NestedGrid/> */}
+      <CustomerComponent/>
     </div>
-
-    
 
     //   <div className="App">
 
@@ -80,10 +85,9 @@ function App() {
     //   {/* Conditional rendering of message based on login status */}
     //   <p>{isLoggedIn ? 'Welcome back, User!' : 'Please log in.'}</p>
 
-
     //   {/* Conditional rendering of button label */}
     //   <button onClick={toggleLogin}>
-        
+
     //     {isLoggedIn ? 'Logout' : 'Login'}
     //   </button>
 
